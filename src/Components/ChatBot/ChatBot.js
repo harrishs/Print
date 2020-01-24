@@ -161,7 +161,7 @@ function CustomChatbot(props) {
     {
       id: "finished",
       message:
-        "Woo, thanks for getting to know me! I can build you more experiences like this.",
+        "Woo, thanks for getting to know me! I can build you more experiences like this. Call me, maybe?",
       end: true
     }
   ];
