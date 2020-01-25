@@ -58,11 +58,22 @@ function CustomChatbot(props) {
     {
       id: "Greet",
       message: "Hi, it’s Harrish 👋",
-      trigger: "Cover"
+      trigger: "second"
     },
     {
-      id: "Cover",
-      message: "Thank you for checking out my conversational cover letter :)",
+      id: "second",
+      message: "May I ask your name?",
+      trigger: "third"
+    },
+    {
+      id: "third",
+      user: true,
+      trigger: "fourth"
+    },
+    {
+      id: "fourth",
+      message:
+        "Oh, {previousValue} from Opencare! I’m glad you made it to my conversational cover letter :)",
       trigger: "allOpt"
     },
     {
@@ -149,7 +160,7 @@ function CustomChatbot(props) {
     {
       id: "finalWhat",
       message:
-        "I also know how to thrive in team environments that move fast and strike goals together, especially from my time at Wendys and Statistics Canada as a Census enumerator.",
+        "I also know how to thrive in team environments that move fast and strike goals together, especially from my time at Wendys and Statistics Canada.",
       trigger: () => {
         if (options.length < 1) {
           return "finished";
