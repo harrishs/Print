@@ -155,7 +155,7 @@ function CustomChatbot(props) {
       id: "whatCont",
       message:
         "Not only do I have the technical skills you’re looking for (React, Node.js), I have not stopped investing in my growth. I’m currently enrolled at Ryerson’s Chang School to get better at Computer Science Theory and am also strengthening my React and Node skills through the use of Udemy courses.",
-      trigger: "finalWhy"
+      trigger: "finalWhat"
     },
     {
       id: "finalWhat",
