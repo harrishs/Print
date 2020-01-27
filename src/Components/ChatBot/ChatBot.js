@@ -78,7 +78,15 @@ function CustomChatbot(props) {
     },
     {
       id: "allOpt",
-      message: "What would you like to learn about me?",
+      message: () => {
+        if (options.length === 3) {
+          return "What would you like to learn about me?";
+        } else if (options.length === 2) {
+          return "Next Up:";
+        } else {
+          return "Finally:";
+        }
+      },
       trigger: "giveOpt"
     },
     {
@@ -172,7 +180,7 @@ function CustomChatbot(props) {
     {
       id: "finished",
       message:
-        "Woo, thanks for getting to know me! I can build you more experiences like this. Call me, maybe?",
+        "Woo, thanks for getting to know me! I can build more creative experiences like this. You can reach me at (647)632-1674 or harrish.s@hotmail.ca",
       end: true
     }
   ];
@@ -182,7 +190,7 @@ function CustomChatbot(props) {
         steps={steps}
         botAvatar="https://media-exp1.licdn.com/dms/image/C5603AQG8dr4YQIjo6g/profile-displayphoto-shrink_200_200/0?e=1585180800&v=beta&t=RubJTXIfSbV7s4WaTqbhrXg50AdGhQlZpTExqpQEg3c"
         botDelay={1500}
-        headerTitle="Harrish Suhumar Cover Letter to Opencare"
+        headerTitle="Harrish Suhumar Conversational Cover Letter"
         width="700px"
         height="70vh"
       />
