@@ -86,7 +86,7 @@ function CustomChatbot(props) {
     {
       id: "why",
       message:
-        "A few years ago I was a fresh graduate with a Hons. BSc. in Life Sciences, but was looking for a career path that was hands-on.",
+        "A few years ago I was a fresh graduate with an Hons. BSc. in Life Sciences, but was looking for a career path that was hands-on.",
       trigger: "whyCont",
     },
     {
@@ -98,7 +98,7 @@ function CustomChatbot(props) {
     {
       id: "moreWhy",
       message:
-        "I enjoyed every part of the journey learning about different web technologies. I have found my main interest lying in the front and backend development of user interactions.",
+        "I enjoyed every part of the journey, and learning about different web technologies. I have found my main interest lying in the front and backend development of user interactions.",
       trigger: "finalWhy",
     },
     {
@@ -116,13 +116,13 @@ function CustomChatbot(props) {
     {
       id: "zensurance",
       message:
-        "I believe in applying only for the companies I’m truly excited about, and that’s why I built this entire conversational cover letter just for you, Zensurance.",
+        "I believe in applying to companies that I am truly excited about, and hope to show why I would be a great addition to the Zensurance team.",
       trigger: "moreOpen",
     },
     {
       id: "moreOpen",
       message:
-        "I have a strong interest in working on a product that empowers small business owners through technology — and that is exactly what Zensurance is doing!",
+        "I have a strong interest in working on products that empowers small business owners through technology — and that is exactly what Zensurance is doing!",
       trigger: "openCont",
     },
     {
@@ -179,7 +179,7 @@ function CustomChatbot(props) {
       <ChatBot
         steps={steps}
         botAvatar="https://media-exp1.licdn.com/dms/image/C5603AQG8dr4YQIjo6g/profile-displayphoto-shrink_200_200/0?e=1594857600&v=beta&t=_ZuF8IPkBNMrn3gtGLEOX-5iKDTYMojXugdDRJ8F1iw"
-        botDelay={1500}
+        botDelay={2500}
         headerTitle="Harrish Suhumar Conversational Cover Letter"
         width="700px"
         height="70vh"
