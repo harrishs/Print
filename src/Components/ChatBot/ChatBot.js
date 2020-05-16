@@ -12,7 +12,7 @@ function CustomChatbot(props) {
     botBubbleColor: "#00B2B2",
     botFontColor: "#fff",
     userBubbleColor: "#fff",
-    userFontColor: "#4c4c4c"
+    userFontColor: "#4c4c4c",
   };
 
   let options = [
@@ -26,19 +26,19 @@ function CustomChatbot(props) {
           }
         }
         return "why";
-      }
+      },
     },
     {
-      value: "opencare",
-      label: "Why I Want to Join Opencare",
+      value: "zensurance",
+      label: "Why I Want to Join Zensurance?",
       trigger: () => {
         for (let i = 0; i < options.length; i++) {
-          if (options[i].value === "opencare") {
+          if (options[i].value === "zensurance") {
             options.splice(i, 1);
           }
         }
-        return "opencare";
-      }
+        return "zensurance";
+      },
     },
     {
       value: "what",
@@ -50,31 +50,21 @@ function CustomChatbot(props) {
           }
         }
         return "what";
-      }
-    }
+      },
+    },
   ];
 
   const steps = [
     {
       id: "Greet",
-      message: "Hi, it’s Harrish 👋",
-      trigger: "second"
+      message: "Hi, my name is Harrish Suhumar👋",
+      trigger: "second",
     },
     {
       id: "second",
-      message: "May I ask your name?",
-      trigger: "third"
-    },
-    {
-      id: "third",
-      user: true,
-      trigger: "fourth"
-    },
-    {
-      id: "fourth",
       message:
-        "Oh, {previousValue} from Opencare! I’m glad you made it to my conversational cover letter :)",
-      trigger: "allOpt"
+        "You must be from Zensurance! I’m glad you made it to my conversational cover letter :)",
+      trigger: "allOpt",
     },
     {
       id: "allOpt",
@@ -87,83 +77,83 @@ function CustomChatbot(props) {
           return "Finally:";
         }
       },
-      trigger: "giveOpt"
+      trigger: "giveOpt",
     },
     {
       id: "giveOpt",
-      options: options
+      options: options,
     },
     {
       id: "why",
       message:
-        "One of my favorite books is “Start With Why”, so I’ll start there. I pursued an education in Life Sciences, completed it 🎓, and was suddenly lost in ambition.",
-      trigger: "whyCont"
+        "A few years ago I was a fresh graduate with a Hons. BSc. in Life Sciences, but was looking for a career path that was hands-on.",
+      trigger: "whyCont",
     },
     {
       id: "whyCont",
       message:
-        "I knew I was passionate about healthcare and changing the way we experience it, but I didn’t know where to start … until LightHouse Labs.",
-      trigger: "moreWhy"
+        "I knew I was passionate about technology and its applications towards simplifying tasks, but I didn’t know where to start … until I attended a Full Stack Web Dev course at Lighthouse Labs.",
+      trigger: "moreWhy",
     },
     {
       id: "moreWhy",
       message:
-        "I jumped right into a Full-Stack Web Development program because I loved building, and delivering beautiful web experiences.",
-      trigger: "finalWhy"
+        "I enjoyed every part of the journey learning about different web technologies. I have found my main interest lying in the front and backend development of user interactions.",
+      trigger: "finalWhy",
     },
     {
       id: "finalWhy",
       message:
-        "I found my purpose again: building a better way to experience healthcare",
+        "I have recently found myself being drawn towards disruptive technologies in FinTech, and am looking to expose myself to more of the world of FinTech.",
       trigger: () => {
         if (options.length < 1) {
           return "finished";
         } else {
           return "allOpt";
         }
-      }
+      },
     },
     {
-      id: "opencare",
+      id: "zensurance",
       message:
-        "I believe in applying only for the companies I’m truly excited about, and that’s why I built this entire conversational cover letter just for you, Opencare.",
-      trigger: "moreOpen"
+        "I believe in applying only for the companies I’m truly excited about, and that’s why I built this entire conversational cover letter just for you, Zensurance.",
+      trigger: "moreOpen",
     },
     {
       id: "moreOpen",
       message:
-        "I want to change the way we interact with our healthcare providers—and that is exactly what Opencare is doing!",
-      trigger: "openCont"
+        "I have a strong interest in working on a product that empowers small business owners through technology — and that is exactly what Zensurance is doing!",
+      trigger: "openCont",
     },
     {
       id: "openCont",
       message:
         "This couldn’t be an even more perfect combination of what I want to do, and who I want to do it for.",
-      trigger: "finalOpen"
+      trigger: "finalOpen",
     },
     {
       id: "finalOpen",
       message:
-        "BONUS: I’ve got all my friends and family using Opencare too and loving it!",
+        "Finally, I feel I meet the qualifications that are being asked of the Jr.Software Enginner,and believe I can exceed expectations of this role.",
       trigger: () => {
         if (options.length < 1) {
           return "finished";
         } else {
           return "allOpt";
         }
-      }
+      },
     },
     {
       id: "what",
       message:
-        "I am extremely user-focused with a product-mindset, and resonate so closely with all 8 of your company values.",
-      trigger: "whatCont"
+        "I am extremely user-focused with a product-mindset, and resonate so closely with all of your company values.",
+      trigger: "whatCont",
     },
     {
       id: "whatCont",
       message:
-        "Not only do I have the technical skills you’re looking for (React, Node.js), I have not stopped investing in my growth. I’m currently enrolled at Ryerson’s Chang School to get better at Computer Science Theory and am also strengthening my React and Node skills through the use of Udemy courses.",
-      trigger: "finalWhat"
+        "Not only do I have the technical skills you’re looking for (Javascript, NodeJS, MongoDB), I have not stopped investing in my growth. I’m currently enrolled at Ryerson’s Chang School to get better at Computer Science Theory and am also strengthening my Javascript framework skills through the use of Udemy courses.",
+      trigger: "finalWhat",
     },
     {
       id: "finalWhat",
@@ -175,20 +165,20 @@ function CustomChatbot(props) {
         } else {
           return "allOpt";
         }
-      }
+      },
     },
     {
       id: "finished",
       message:
-        "Woo, thanks for getting to know me! I can build more creative experiences like this. You can reach me at (647)632-1674 or harrish.s@hotmail.ca",
-      end: true
-    }
+        "Woo, thanks for getting to know me! Feel free to check out my resume or github to see what I have been working or to reach out.",
+      end: true,
+    },
   ];
   return (
     <ThemeProvider theme={theme}>
       <ChatBot
         steps={steps}
-        botAvatar="https://media-exp1.licdn.com/dms/image/C5603AQG8dr4YQIjo6g/profile-displayphoto-shrink_200_200/0?e=1585180800&v=beta&t=RubJTXIfSbV7s4WaTqbhrXg50AdGhQlZpTExqpQEg3c"
+        botAvatar="https://media-exp1.licdn.com/dms/image/C5603AQG8dr4YQIjo6g/profile-displayphoto-shrink_200_200/0?e=1594857600&v=beta&t=_ZuF8IPkBNMrn3gtGLEOX-5iKDTYMojXugdDRJ8F1iw"
         botDelay={1500}
         headerTitle="Harrish Suhumar Conversational Cover Letter"
         width="700px"
