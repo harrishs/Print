@@ -134,7 +134,7 @@ function CustomChatbot(props) {
     {
       id: "finalOpen",
       message:
-        "Finally, I feel I meet the qualifications that are being asked of the Jr.Software Enginner,and believe I can exceed expectations of this role.",
+        "Finally, I feel I meet the qualifications that are being asked of the Jr.Software Engineer,and believe I can exceed expectations of this role.",
       trigger: () => {
         if (options.length < 1) {
           return "finished";
